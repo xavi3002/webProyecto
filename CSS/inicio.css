@@ -1,0 +1,54 @@
+@font-face {
+    font-family: Altone;
+    src: url(../fonts/AltoneTrial-Regular.ttf);
+}
+
+* {
+    font-family: Altone;
+}
+
+nav {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: block;
+}
+
+.navbar-title {
+    display: inline-block;
+    padding: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: #000000;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+nav ul li a:hover {
+    background-color: #3579be4d;
+    text-decoration: underline;
+    text-decoration-color: #357ABE;
+}
+
+.header {
+    padding: 120px;
+    text-align: center;
+    background-image: url(../pictures/CasaAmarilla.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+    font-size: 20px;
+  }
