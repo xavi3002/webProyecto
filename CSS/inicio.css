@@ -50,10 +50,11 @@ nav ul li a:hover {
 
 .header {
     padding: 120px;    
-    background-image: url(../pictures/CasaAmarillaTarde.avif);
+    background-image: url(../pictures/CasaAmarilla.jpg);
     background-repeat: no-repeat;
     background-attachment: inherit;
     background-position: center;
+    background-size: cover;
     color: white;
     font-size: 20px;
     text-align: center;
