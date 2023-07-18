@@ -49,7 +49,7 @@ nav ul li a:hover {
 }
 
 .header {
-    padding: 120px;    
+    padding: 120px;
     background-image: url(../pictures/CasaAmarilla.jpg);
     background-repeat: no-repeat;
     background-attachment: inherit;
@@ -91,8 +91,8 @@ footer a {
     z-index: 1000;
 }
 
-.conoce{
-    padding: 120px;    
+.conoce {
+    padding: 120px;
     background-image: url(../pictures/CRbackdrop.png);
     background-repeat: no-repeat;
     background-attachment: inherit;
@@ -105,32 +105,31 @@ footer a {
     text-shadow: 5px 5px 5px #000000;
 }
 
-/* MODIFICAR A HREF A OTRA PESTAÑA POR MEDIO DEL BOTON, NO A*/
-a{
-    text-decoration: none;
-    color: #FFFFFF;
-}
 .button-41 {
-  background-color: #357ABE;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  height: 44px;
-  line-height: 44px;
-  overflow: hidden;
-  padding: 0 20px;
-  pointer-events: auto;
-  position: relative;
-  text-align: center;
-  vertical-align: top;
-  width: 12%;
-  border: 0;
+    background-color: #357ABE;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    height: 44px;
+    line-height: 44px;
+    overflow: hidden;
+    padding: 0 20px;
+    pointer-events: auto;
+    position: relative;
+    text-align: center;
+    vertical-align: top;
+    width: 12%;
+    border: 0;
 }
 
 .button-41:hover {
-  background: #ffffffb4;
-  color: #357ABE;
+    background: #ffffff9a;
+    color: #357ABE;
+    font-weight: bold;
+    text-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+    border-color: #357ABE;
+
 }
 
