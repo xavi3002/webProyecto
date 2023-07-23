@@ -1,0 +1,24 @@
+#side_nav{
+
+    background: rgb(20, 20, 82);
+    min-width: 250px;
+    max-width: 250px;
+    color: white;
+    
+    padding: 10px;
+}
+
+.contenido-principal{
+    min-height: 100vh;
+    width: 100%;
+    margin: 0px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
