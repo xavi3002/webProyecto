@@ -89,14 +89,17 @@ nav ul li a:hover {
 }
 
 
-.inicio{
+
+
+
+.repre{
     text-decoration: underline;
     text-underline-offset: 5px;
 }
 
 .header {
     padding: 120px;
-    background-image: url(../pictures/CasaAmarilla.jpg);
+    background-image: url(../pictures/stock-photo-flags-against-blue-sky-1264758943-transformed.jpeg);
     background-repeat: no-repeat;
     background-attachment: inherit;
     background-position: center;
@@ -137,21 +140,7 @@ footer a {
     z-index: 1000;
 }
 
-.conoce {
-    padding: 120px;
-    background-image: url(../pictures/CRbackdrop.png);
-    background-repeat: no-repeat;
-    background-attachment: inherit;
-    background-position: center;
-    background-size: cover;
-    height: 500px;
-    color: white;
-    font-size: 20px;
-    text-align: left;
-    text-shadow: 5px 5px 5px #000000;
-}
-
-.button-41 {
+.button {
     background-color: #357ABE;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
@@ -166,11 +155,11 @@ footer a {
     position: relative;
     text-align: center;
     vertical-align: top;
-    width: 12%;
+    width: 25%;
     border: 0;
 }
 
-.button-41:hover {
+.button:hover {
     background: #ffffff9a;
     color: #357ABE;
     font-weight: bold;
@@ -179,33 +168,14 @@ footer a {
 
 }
 
-
-
-
-
-
-
-.background-section {
-    background-image: url('https://palmsrealtycr.com/wp-content/uploads/2016/01/scarlet-macaw-parrots-new-hd-wallpapers-free-downlaod-birds-pictures.jpg'); /* Ruta de la imagen de fondo */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    padding: 130px; 
-    font-size: 30px;
-    text-shadow: 5px 5px 5px #000000;
-    text-align: center;
-    color: #fff; 
-    opacity: 0.9; 
-  }
-
-  @media screen and (max-width: 768px) {
-    .background-section {
-      opacity: 1; /* Hacer la sección completamente opaca en pantallas pequeñas */
-    }
-  }
-
-  
-.inicio{
-    text-decoration: underline;
-    text-underline-offset: 5px;
+.primerseccion{
+align-items: center;
+display: flex; 
+justify-content: center;
 }
+
+
+
+
+
+
