@@ -179,12 +179,7 @@ footer a {
 
 }
 
-
-
-
-
-
-
+/* Parte de conectemos costa rica con el mundo, loros */
 .background-section {
     background-image: url('https://palmsrealtycr.com/wp-content/uploads/2016/01/scarlet-macaw-parrots-new-hd-wallpapers-free-downlaod-birds-pictures.jpg'); /* Ruta de la imagen de fondo */
     background-size: cover;
@@ -195,7 +190,7 @@ footer a {
     text-shadow: 5px 5px 5px #000000;
     text-align: center;
     color: #fff; 
-    opacity: 0.9; 
+    opacity: 80%; 
   }
 
   @media screen and (max-width: 768px) {
@@ -208,4 +203,64 @@ footer a {
 .inicio{
     text-decoration: underline;
     text-underline-offset: 5px;
+}
+
+/*SERVICIOS DASHBOARD*/
+
+#board-Servicios {
+    text-align: center;
+    margin: 20px;
+}
+
+article {
+    border: 1px solid rgba(38, 78, 158, 1);
+    height: 220px;
+    border-radius: 10px;
+    background-color: rgb(223, 223, 223);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+article i {
+    margin-top: 10px;
+
+}
+
+.container article {
+    margin: 10px 0px 5px 0px;
+
+}
+
+.botonServicio {
+    color: white;
+    width: 50px;
+    background-color: rgba(38, 78, 158, 1);
+    border-radius: 10px;
+}
+
+.tituloServicios {
+
+    height: 350px;
+    width: auto;
+
+    background-image: url("../pictures/pexels-sagui-andrea-618848.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 175px;
+}
+
+.h1Servicios {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 50%;
+    color: white;
+    background: rgba(255, 255, 255, 0.226);
+    border-radius: 20px;
 }
