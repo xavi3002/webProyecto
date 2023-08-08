@@ -95,7 +95,7 @@ nav ul li a:hover {
 }
 
 .header {
-    padding: 120px;
+    padding: 170px;
     background-image: url(../pictures/CasaAmarilla.jpg);
     background-repeat: no-repeat;
     background-attachment: inherit;
@@ -139,16 +139,18 @@ footer a {
 
 .conoce {
     padding: 120px;
-    background-image: url(../pictures/CRbackdrop.png);
+    background-image: url(../pictures/patricia-palacin-EitAJO7TDLk-unsplash.jpg);
     background-repeat: no-repeat;
-    background-attachment: inherit;
-    background-position: center;
+    background-attachment: fixed;
+    background-position: right;
     background-size: cover;
     height: 500px;
     color: white;
     font-size: 20px;
     text-align: left;
     text-shadow: 5px 5px 5px #000000;
+    background-color: rgb(122, 122, 123); /*para oscurecer la imagen*/
+    background-blend-mode: multiply;
 }
 
 .button-41 {
@@ -181,7 +183,8 @@ footer a {
 
 /* Parte de conectemos costa rica con el mundo, loros */
 .background-section {
-    background-image: url('https://palmsrealtycr.com/wp-content/uploads/2016/01/scarlet-macaw-parrots-new-hd-wallpapers-free-downlaod-birds-pictures.jpg'); /* Ruta de la imagen de fondo */
+    /*background-image: url('https://palmsrealtycr.com/wp-content/uploads/2016/01/scarlet-macaw-parrots-new-hd-wallpapers-free-downlaod-birds-pictures.jpg');  Ruta de la imagen de fondo */
+    background-image: url(../pictures/luis-diego-aguilar-bSJWEfOrHps-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -190,7 +193,8 @@ footer a {
     text-shadow: 5px 5px 5px #000000;
     text-align: center;
     color: #fff; 
-    opacity: 80%; 
+    background-color: rgb(160, 159, 159);
+    background-blend-mode: multiply;
   }
 
   @media screen and (max-width: 768px) {
@@ -241,10 +245,8 @@ article i {
 }
 
 .tituloServicios {
-
     height: 350px;
     width: auto;
-
     background-image: url("../pictures/pexels-sagui-andrea-618848.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -254,7 +256,6 @@ article i {
 }
 
 .h1Servicios {
-
     display: flex;
     justify-content: center;
     align-items: center;
