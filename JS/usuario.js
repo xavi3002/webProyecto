@@ -40,3 +40,8 @@ function validatePassword(password){
     }
 
 }
+
+
+function validateField(field){
+    
+}
