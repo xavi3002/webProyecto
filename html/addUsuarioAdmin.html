@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios administradores</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/sandstone/bootstrap.min.css" integrity="sha384-zEpdAL7W11eTKeoBJK1g79kgl9qjP7g84KfK3AZsuonx38n8ad+f5ZgXtoSDxPOh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <h1>Usuarios administradores</h1>
+
+                <form action="" id="frm">
+
+
+                    <div class="form-group">
+                        <input type="number" min="0" name="txtCedula" id="txtCedula" class="form-control" placeholder="Cedula (será el id de usuario)" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" name="txtNombre" id="textNombre" class="form-control" placeholder="Nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" name="txtApellidos" id="txtApellidos" class="form-control" placeholder="Apellido " required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="number" min="0" max="150" name="txtEdad" id="txtEdad" class="form-control" placeholder="Edad" required >
+                    </div>
+
+                    <div class="form-group">
+                       <!-- <input type="text" name="txtSexo" id="txtSexo" class="form-control" placeholder="Sexo" required>  --> 
+                        <label for="">Sexo:</label>
+                        <select name="txtSexo" id="txtSexo">
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                            <option value="no binario">no binario   </option>
+                            <option value="otro">otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" name="TxtDireccion" id="TxtDireccion" class="form-control" placeholder="Direccion" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" name="txtContrasena" id="txtContrasena" class="form-control" placeholder="Password" required>
+                    </div>
+
+                    <button id="btnGuardar" class="btn btn-primary">Registrar usuario administrador</button>
+                </form>
+            </div>
+
+
+            <!--LISTA-->
+        <div class="col-8">
+            <table id="tblDatos" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Edad</th>
+                        <th>Sexo</th>
+                        <th>Direccion</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        </div>
+
+        
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script><div class="container">
+    <script src="../JS/firebaseConfig.js"></script>
+    <script src="../JS/usuario.js"></script>
+</body>
+</html>
