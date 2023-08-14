@@ -1,0 +1,89 @@
+@font-face {
+    font-family: Gontserrat;
+    src: url(../fonts/Gontserrat-Regular.ttf);
+}
+
+* {
+    font-family: Gontserrat !important;
+    box-sizing: border-box;
+}
+
+nav {
+    background: #ffffff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    width: 100%;
+}
+
+.navbar-title {
+    float: left;
+    padding: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline-block;
+    
+
+}
+
+nav ul li a  {
+    color: #000000;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+nav ul li a:hover {
+    background-color: #3579be4d;
+    text-decoration: none;
+    text-decoration-color: #357ABE;
+}
+
+/* Estilos para el menú desplegable */
+.repre {
+    position: relative;
+}
+
+.repre .dropdown-menu {
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.2);
+}
+
+.repre:hover .dropdown-menu {
+    display: grid;
+}
+
+.repre .dropdown-menu li {
+    padding: 15px;
+}
+
+.repre .dropdown-menu li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+.repre .dropdown-menu li a:hover {
+    background-color: #3579be4d;
+    text-decoration: none;
+    text-decoration-color: #357ABE;
+}

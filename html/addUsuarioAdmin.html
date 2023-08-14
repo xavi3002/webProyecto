@@ -5,8 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuarios administradores</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/sandstone/bootstrap.min.css" integrity="sha384-zEpdAL7W11eTKeoBJK1g79kgl9qjP7g84KfK3AZsuonx38n8ad+f5ZgXtoSDxPOh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/navbar.css">
 </head>
 <body>
+    <!--NAVBAR-->
+    <nav>
+        <ul>
+            <li class="navbar-title"><img src="../pictures/LogoPrincipal.jpg" alt="logo principal" style="width: 35%;"></li>
+            <li class="inicio"><a href="inicio.html">Inicio</a></li>
+            <li class="repre">
+                <a href="#">Representaciones</a>
+                <ul class="dropdown-menu">
+                    <li><a href="RepresentacionesCostaRica.html">Representacions de Costa Rica en el Extranjero</a></li>
+                    <li><a href="RepresentacionesExtranjeras.html">Representaciones Extranjeras en Costa Rica</a></li>
+                </ul>
+            </li>
+            <li><a href="#!">Contacto</a></li>
+            <li><a href="serviciosFirst.html">Servicios</a></li>
+            <li><a href="#!">¿Quiénes somos?</a></li>
+        </ul>
+    </nav>
+    
     <div class="container">
         <div class="row">
             <div class="col-4">
@@ -83,5 +102,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script><div class="container">
     <script src="../JS/firebaseConfig.js"></script>
     <script src="../JS/usuario.js"></script>
+    <script src="../JS/inicio.js"></script>
 </body>
 </html>
