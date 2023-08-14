@@ -13,7 +13,7 @@ var idSeleccionado = "";
 
 const form = document.querySelector("#frm");
 // que se agarre el tbody dentro de tbl datos
-const table = document.querySelector("#tblDatos>tbody")
+const table = document.querySelector(".row")
 
 
 //---------------------------------------------------------5- Metodos del crud-------------------------------------------------------
@@ -49,30 +49,21 @@ window.addEventListener("load", async()=>{
             table.innerHTML+= `
                     
             
+        <div class="col col-md-4>
             <div class="card">
                     <img src="https://geopoliticaybanderas.files.wordpress.com/2015/12/alemania.png?w=500&h=300"
                         alt="Imagen 1" class="card-image">
-                    <h3 class="card-title"> Alemania </h3>
-                    <p class="card-description">Embajada en Costa Rica</p>
-                    <a href="#" class="card-button">Leer Mas</a>
+                    <h3 class="card-title"> ${dato.titulo} </h3>
+                    <p class="card-description">Direccion: ${dato.direccion} <br>Codigo postal: ${dato.CodPostal} <br>
+                    Telefono: ${dato.Telefono} <br>
+                    Fax: ${dato.Fax}<br>
+                    Email: ${dato.Email}<br>
+                    Tipo de atencion ${dato.Atencion}<br>
+                    Horario: ${dato.Horas}
+                    </p>
             </div>
-            
-            
-                        <tr>
-                        <td>${dato.direccion}</td>
-                        <td>${dato.CodPostal}</td>
-                        <td>${dato.Telefono}</td>
-                        <td>${dato.Fax}</td>
-                        <td>${dato.Email}</td>
-                        <td>${dato.Atencion}</td>
-
-                        <td>
-                            <button class="btn btn-warning btn-editar mx-1" data-id="${element.id}"> Editar </button>
-                            <button class="btn btn-danger btn-borrar mx-1" data-id="${element.id}">Eliminar </button>
-                        </td>
-                    </tr>
-
-            
+        </div>   
+      
             
             `;
         });
