@@ -10,71 +10,65 @@
     <div class="container">
         <div class="row">
             <div class="col-4">
+
                 <h1>Usuarios administradores</h1>
-
+                
                 <form action="" id="frm">
-
-
                     <div class="form-group">
-                        <input type="number" min="0" name="txtCedula" id="txtCedula" class="form-control" placeholder="Cedula (será el id de usuario)" required>
+                        <input type="number" min="0" name="txtCedula" id="txtCedula" class="form-control"
+                            placeholder="Cedula (será el id de usuario)" required>
                     </div>
-
                     <div class="form-group">
-                        <input type="text" name="txtNombre" id="textNombre" class="form-control" placeholder="Nombre" required>
+                        <input type="text" name="txtNombre" id="textNombre" class="form-control" placeholder="Nombre"
+                            required>
                     </div>
-
                     <div class="form-group">
-                        <input type="text" name="txtApellidos" id="txtApellidos" class="form-control" placeholder="Apellido " required>
+                        <input type="text" name="txtApellidos" id="txtApellidos" class="form-control"
+                            placeholder="Apellido " required>
                     </div>
-
                     <div class="form-group">
-                        <input type="number" min="0" max="150" name="txtEdad" id="txtEdad" class="form-control" placeholder="Edad" required >
+                        <input type="number" min="0" max="150" name="txtEdad" id="txtEdad" class="form-control"
+                            placeholder="Edad" required>
                     </div>
-
                     <div class="form-group">
-                       <!-- <input type="text" name="txtSexo" id="txtSexo" class="form-control" placeholder="Sexo" required>  --> 
+                        <!-- <input type="text" name="txtSexo" id="txtSexo" class="form-control" placeholder="Sexo" required>  -->
                         <label for="">Sexo:</label>
                         <select name="txtSexo" id="txtSexo">
                             <option value="Masculino">Masculino</option>
                             <option value="Femenino">Femenino</option>
-                            <option value="no binario">no binario   </option>
+                            <option value="no binario">no binario </option>
                             <option value="otro">otro</option>
                         </select>
                     </div>
-
                     <div class="form-group">
-                        <input type="text" name="TxtDireccion" id="TxtDireccion" class="form-control" placeholder="Direccion" required>
+                        <input type="text" name="TxtDireccion" id="TxtDireccion" class="form-control"
+                            placeholder="Direccion" required>
                     </div>
-
                     <div class="form-group">
-                        <input type="password" name="txtContrasena" id="txtContrasena" class="form-control" placeholder="Password" required>
+                        <input type="password" name="txtContrasena" id="txtContrasena" class="form-control"
+                            placeholder="Password" required>
                     </div>
-
                     <button id="btnGuardar" class="btn btn-primary">Registrar usuario administrador</button>
                 </form>
             </div>
-
-
+    
             <!--LISTA-->
-        <div class="col-8">
-            <table id="tblDatos" class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Apellidos</th>
-                        <th>Edad</th>
-                        <th>Sexo</th>
-                        <th>Direccion</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+            <div class="col-8">
+                <table id="tblDatos" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellidos</th>
+                            <th>Edad</th>
+                            <th>Sexo</th>
+                            <th>Direccion</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
         </div>
-
-        </div>
-
-        
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
