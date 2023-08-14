@@ -27,7 +27,7 @@ body {
 
 .contact-in:nth-child(1) {
 	flex: 30%;
-	background: url(../img/sede.jpg);
+	background: url(../pictures/sede.jpg);
 	color: #fff;
 }
 
