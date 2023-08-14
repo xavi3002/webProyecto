@@ -1,10 +1,10 @@
 @font-face {
-    font-family: Altone;
-    src: url(../fonts/AltoneTrial-Regular.ttf);
+    font-family: Gontserrat;
+    src: url(../fonts/Gontserrat-Regular.ttf);
 }
 
 * {
-    font-family: Altone;
+    font-family: Gontserrat !important;
     box-sizing: border-box;
 }
 
