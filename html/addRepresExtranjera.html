@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Modificar Representaciones Extranjeras</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../pictures/logo.png">
-    <link rel="stylesheet" href="../CSS/inicio.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/litera/bootstrap.min.css"
         integrity="sha384-enpDwFISL6M3ZGZ50Tjo8m65q06uLVnyvkFO3rsoW0UC15ATBFz3QEhr3hmxpYsn" crossorigin="anonymous">
 </head>
+
 <body>
+    <!--NAVBAR-->
+    <nav>
+        <ul>
+            <li class="navbar-title"><img src="../pictures/LogoPrincipal.jpg" alt="logo principal" style="width: 35%;"></li>
+            <li class="inicio"><a href="inicio.html">Inicio</a></li>
+            <li class="repre">
+                <a href="#">Representaciones</a>
+                <ul class="dropdown-menu">
+                    <li><a href="RepresentacionesCostaRica.html">Representacions de Costa Rica en el Extranjero</a></li>
+                    <li><a href="RepresentacionesExtranjeras.html">Representaciones Extranjeras en Costa Rica</a></li>
+                </ul>
+            </li>
+            <li><a href="#!">Contacto</a></li>
+            <li><a href="serviciosFirst.html">Servicios</a></li>
+            <li><a href="#!">¿Quiénes somos?</a></li>
+        </ul>
+    </nav>
+    
+    <button class="btn btn-info">&#8592 Regresar</button>
+    
     <div class="container">
         <h1>Mantenimiento de Representaciones Extranjeras</h1>
         <div class="row">
@@ -31,15 +53,18 @@
                     </div>
                     <div class="form-group">
                         <h5>Teléfono:</h5>
-                        <input type="tel" name="txtTelefono" id="txtTelefono" class="form-control" placeholder="(+506) 2222-2222" required>
+                        <input type="tel" name="txtTelefono" id="txtTelefono" class="form-control"
+                            placeholder="(+506) 2222-2222" required>
                     </div>
                     <div class="form-group">
                         <h5>Fax:</h5>
-                        <input type="tel" name="txtFax" id="txtFax" class="form-control" placeholder="(+506) 8888-8888" required >
+                        <input type="tel" name="txtFax" id="txtFax" class="form-control" placeholder="(+506) 8888-8888"
+                            required>
                     </div>
                     <div class="form-group">
                         <h5>Correo electrónico:</h5>
-                        <input type="email" name="txtEmail" id="txtEmail" class="form-control" placeholder="ejemplo@correo.com" required>
+                        <input type="email" name="txtEmail" id="txtEmail" class="form-control"
+                            placeholder="ejemplo@correo.com" required>
                     </div>
                     <div class="form-group">
                         <h5>Horas de oficina:</h5>
@@ -56,7 +81,7 @@
                     <button id="btnGuardar" class="btn btn-success">Registrar representacion extranjera</button>
                 </form>
             </div>
-    
+
             <!--LISTA-->
             <div class="col-9">
                 <table id="tblDatos" class="table table-striped">
@@ -89,7 +114,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script><div class="container">
     <script src="../JS/firebaseConfig.js"></script>
     <script src="../JS/representacionExtranjeraAdm.js"></script>
-
+    <script src="../JS/inicio.js"></script>
 
 </body>
+
 </html>
