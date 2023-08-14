@@ -18,6 +18,13 @@
         <div class="row">
             <div class="col-3">
                 <form action="" id="frm">
+
+
+                    <div class="form-group">
+                        <h5>Titulo:</h5>
+                        <input type="text" name="txtTitulo" id="txtTitulo" class="form-control" required>
+                    </div>
+
                     <div class="form-group">
                         <h5>Dirección:</h5>
                         <input type="text" name="txtDireccion" id="txtDireccion" class="form-control" required>
@@ -51,9 +58,9 @@
                     </div>
                     <div class="form-group">
                         <h5>Imagen de portada:</h5>
-                        <input type="file" name="txtImagen" id="txtImagen" class="form-control" required>
+                        
                     </div>
-                    <button id="btnGuardar" class="btn btn-success">Registrar representación</button>
+                    <button id="btnGuardar" class="btn btn-success">Registrar representacion extranjera</button>
                 </form>
             </div>
 
@@ -62,6 +69,7 @@
                 <table id="tblDatos" class="table table-striped">
                     <thead>
                         <tr>
+                            <th>Titulo</th>
                             <th>Dirección</th>
                             <th>Código Postal</th>
                             <th>Teléfono</th>
@@ -70,12 +78,26 @@
                             <th>Horas de oficina</th>
                             <th>Atención al público</th>
                             <th>Imagen</th>
+                            <th></th>
+                            
                         </tr>
+                        
                     </thead>
+                    <tbody></tbody>
                 </table>
             </div>
         </div>
     </div>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script><div class="container">
+    <script src="../JS/firebaseConfig.js"></script>
+    <script src="../JS/representacionExtranjeraAdm.js"></script>
+
+
 </body>
 
 </html>

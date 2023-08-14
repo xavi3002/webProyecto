@@ -7,7 +7,7 @@ const db = firebase.firestore();
 //3-  crear objetos 
 // String para usar una vez el nombre
 
-const collectionString = "usuarioAdministrador";
+const collectionString = "representacionExtranjeras";
 var estadoEditar = false;
 var idSeleccionado = "";
 
@@ -44,17 +44,22 @@ const onDelete = paramId => db.collection(collectionString).doc(paramId).delete(
 window.addEventListener("load", async()=>{
     await onFindAll((query)=>{
 
-            table.innerHTML="";
+        table.innerHTML="";
         query.forEach(element => {
             let dato=element.data();
             table.innerHTML+= `
                     <tr>
-                        <td>${dato.cedula}</td>
-                        <td>${dato.nombre}</td>
-                        <td>${dato.apellido}</td>
-                        <td>${dato.edad}</td>
-                        <td>${dato.sexo}</td>
+                        <td>${dato.titulo}</td>
                         <td>${dato.direccion}</td>
+                        <td>${dato.CodPostal}</td>
+                        <td>${dato.Telefono}</td>
+                        <td>${dato.Fax}</td>
+                        <td>${dato.Email}</td>
+                        <td>${dato.Atencion}</td>
+                        <td>${dato.Horas}</td>
+                        <td></td>
+                        
+
                         <td>
                             <button class="btn btn-warning btn-editar mx-1" data-id="${element.id}"> Editar </button>
                             <button class="btn btn-danger btn-borrar mx-1" data-id="${element.id}">Eliminar </button>
@@ -73,10 +78,10 @@ window.addEventListener("load", async()=>{
         btnBorrar.forEach(btn=>{
             btn.addEventListener("click", async ev => {
                 // se le agrega el mensaje
-                if(confirm("Desea borrar el usuario administrador?")){
+                if(confirm("Desea borrar la representacion?")){
                     
                     await onDelete(ev.target.dataset.id);
-                    alert("usuario administrador eliminado correctamente")
+                    alert("representacion eliminada correctamente")
 
                     
 
@@ -95,18 +100,18 @@ window.addEventListener("load", async()=>{
                 const docSeleccionado= await findbyId(ev.target.dataset.id);
                 const contactoSeleccionado= docSeleccionado.data();
 
-                form.txtEmail.value= contactoSeleccionado.email;
-                form.txtCedula.value = contactoSeleccionado.cedula;
-                form.txtNombre.value= contactoSeleccionado.nombre;
-                form.txtApellidos.value= contactoSeleccionado.apellido;
-                form.txtEdad.value= contactoSeleccionado.edad;
-                form.txtSexo.value= contactoSeleccionado.sexo;
-                form.TxtDireccion.value= contactoSeleccionado.direccion;
-                form.password.value = contactoSeleccionado.password
 
+                form.txtTitulo.value = contactoSeleccionado.titulo;
+                form.txtDireccion.value= contactoSeleccionado.direccion;
+                form.txtCodPostal.value= contactoSeleccionado.CodPostal;
+                form.txtTelefono.value= contactoSeleccionado.Telefono;
+                form.txtFax.value= contactoSeleccionado.Fax;
+                form.txtEmail.value= contactoSeleccionado.Email;
+                form.txtHoras.value= contactoSeleccionado.Horas;
+                form.txtAtencion.value= contactoSeleccionado.Atencion;
+                
 
-
-                form.btnGuardar.innerText="Modificar";
+                form.btnGuardar.innerText="Modificar representacion";
 
                 estadoEditar=true;
                 idSeleccionado=ev.target.dataset.id;
@@ -130,38 +135,38 @@ form.addEventListener("submit", async (ev) =>{
     ev.preventDefault();
 
     // cajas de texto
+    let titulo = form.txtTitulo.value;
+    let direccion = form.txtDireccion.value;
+    let CodPostal = form.txtCodPostal.value;
+    let Telefono = form.txtTelefono.value;
+    let Fax = form.txtFax.value;
+    let Email = form.txtEmail.value;
+    let Horas = form.txtHoras.value;
+    let Atencion = form.txtAtencion.value;
 
-    let email = form.txtCedula.value;
-    let cedula = form.txtCedula.value;
-    let nombre = form.txtNombre.value;
-    let apellido = form.txtApellidos.value;
-    let edad = form.txtEdad.value;
-    let sexo = form.txtSexo.value;
-    let direccion = form.TxtDireccion.value;
-    let password = form.txtContrasena.value;
 
     if (!estadoEditar){
         await onInsert({
-            email,
-            cedula,
-            nombre,
-            apellido,
-            edad,
-            sexo,
+            titulo, 
             direccion,
-            password
+            CodPostal,
+            Telefono,
+            Fax,
+            Email,
+            Horas,
+            Atencion
     
     
         })
     }else{
-        await onUpdate (idSeleccionado, {email,cedula, nombre,apellido,edad, sexo,direccion,password });
+        await onUpdate (idSeleccionado, {titulo, direccion, CodPostal,Telefono,Fax, Email,Horas,Atencion });
        
     }
 
     
     estadoEditar=false;
     idSeleccionado="";
-    form.btnGuardar.innerText="Registrar usuario administrador"
+    form.btnGuardar.innerText="Registrar representacion extranjera"
     form.reset();
 
 
