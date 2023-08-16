@@ -13,7 +13,7 @@
     
     <script src="https://kit.fontawesome.com/3cb2aa6399.js" crossorigin="anonymous"></script>
 
-    <script src="../JS/servicios.js"></script>
+
 </head>
 <body>
 
@@ -39,7 +39,7 @@
             </ul>
         </nav>
 
-
+        
 
         <div class="contenido">
             <div class="sidebar" id="side_nav">
@@ -54,15 +54,8 @@
 
                 </div>
 
-                <ul class=" tabs nav nav-pills flex-column mt-4">
-                    <li class="nav-item tab is-active"> <a href="#" class="nav-link text-decoration-none" data-switcher
-                            data-tab="1"> <i class="fa-solid fa-book"></i> Primero </a></li>
-                    <li class="nav-item tab"> <a href="#" class="nav-link  text-decoration-none" data-switcher
-                            data-tab="2"> <i class="fa-solid fa-person"></i> Segundo </a></li>
-                    <li class="nav-item tab"> <a href="#" class="nav-link  text-decoration-none" data-switcher
-                            data-tab="3"> <i class="fa-solid fa-globe"></i> Tercero </a></li>
-                    <li class="nav-item tab"> <a href="#" class="nav-link text-decoration-none" data-switcher
-                            data-tab="4"> <i class="fa-solid fa-handshake-angle fa-shake"></i> Cuarto</a></li>
+                <ul   class=" tabs nav nav-pills flex-column mt-4">
+                    
                 </ul>
 
                 <div class="contenido-principal">
@@ -70,27 +63,10 @@
                 </div>
 
             </div>
-
+            
             <div class="containerPages">
-                <section class="pages is-active" data-page="1">
-                    <h2>primero</h2>
-                    <p>Servicio numero 1 </p>
-                </section>
 
-                <section class="pages" data-page="2">
-                    <h2>Segundo</h2>
-                    <p>Servicio numero 2</p>
-                </section>
-
-                <section class="pages" data-page="3">
-                    <h2>Tercero</h2>
-                    <p>Servicio numero 3</p>
-                </section>
-
-                <section class="pages" data-page="4">
-                    <h2>Cuarto</h2>
-                    <p>Servicio numero 4 </p>
-                </section>
+            
             </div>
         </div>
 
@@ -107,9 +83,17 @@
 
     </div>
 
+    <!--FIREBASE-->
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script><div class="container">
+    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    
+    
+    <script src="../JS/firebaseConfig.js"></script>
 
-    <script src="../JS/inicio.js"></script>
+    <script src="../JS/servicios/servicios.js"></script>
 </body>
 </html>
