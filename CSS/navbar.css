@@ -61,9 +61,13 @@ ul li ul:hover {
 }
 
 @keyframes moverRotar {
-    from {transform: rotate(0deg)}
-    to {transform: rotate(180deg)}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
 }
-.caret{
-    animation: moverRotar 0.01s forwards;
+.caret {
+  animation: moverRotar 0.01s forwards; /*fill-mode: forwards para que mantenga su estado final */
 }

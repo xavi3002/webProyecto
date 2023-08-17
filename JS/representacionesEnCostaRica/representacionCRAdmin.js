@@ -82,10 +82,6 @@ window.addEventListener("load", async()=>{
                     
                     await onDelete(ev.target.dataset.id);
                     alert("representacion de CR eliminada correctamente")
-
-                    
-
-
                 }
             });
 
@@ -115,18 +111,9 @@ window.addEventListener("load", async()=>{
 
                 estadoEditar=true;
                 idSeleccionado=ev.target.dataset.id;
-
-
             });
-
         });
-
-
     });
-
-
-
-
 });
 
 // 7- configurar el submit 
@@ -162,12 +149,8 @@ form.addEventListener("submit", async (ev) =>{
         await onUpdate (idSeleccionado, {pais, ciudad,Direccion, CodPostal,Telefono,Fax, Email,Horas,Atencion });
        
     }
-
-    
     estadoEditar=false;
     idSeleccionado="";
     form.btnGuardar.innerText="Registrar representacion de costa rica"
     form.reset();
-
-
 })
