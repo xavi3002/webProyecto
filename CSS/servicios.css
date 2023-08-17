@@ -1,141 +1,129 @@
 /*SERVICIOS DASHBOARD*/
-
+.servicio {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
 #board-Servicios {
-    text-align: center;
-    margin: 20px;
+  text-align: center;
+  margin: 20px;
 }
 
 article {
-    border: 1px solid rgba(38, 78, 158, 1);
-    height: 220px;
-    border-radius: 10px;
-    background-color: rgb(223, 223, 223);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+  border: 1px solid rgba(38, 78, 158, 1);
+  height: 220px;
+  border-radius: 10px;
+  background-color: rgb(223, 223, 223);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 article i {
-    margin-top: 10px;
-
+  margin-top: 10px;
 }
-
-
 
 .container article {
-    margin: 10px 0px 5px 0px;
-
+  margin: 10px 0px 5px 0px;
 }
 
-
 .botonServicio {
-    color: white;
-    width: 50px;
-    background-color: rgba(38, 78, 158, 1);
-    border-radius: 10px;
+  color: white;
+  width: 50px;
+  background-color: rgba(38, 78, 158, 1);
+  border-radius: 10px;
 }
 
 .tituloServicios {
+  height: 350px;
+  width: auto;
 
-    height: 350px;
-    width: auto;
-
-    background-image: url("../pictures/pexels-sagui-andrea-618848.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    padding-top: 175px;
+  background-image: url("../pictures/pexels-sagui-andrea-618848.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 175px;
 }
 
 .h1Servicios {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    width: 50%;
-    color: white;
-    background: rgba(255, 255, 255, 0.226);
-    border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 50%;
+  color: white;
+  background: rgba(255, 255, 255, 0.226);
+  border-radius: 20px;
 }
 
 /*-------------------servicios todos-------------------------------*/
 
 #side_nav {
-    background: rgb(38, 78, 158);
-    background: linear-gradient(0deg, rgba(38, 78, 158, 1) 0%, rgba(255, 255, 255, 1) 61%);
-    min-width: 200px;
-    max-width: 250px;
-    padding: 10px;
-    border: 1px solid rgba(38, 78, 158, 1);
-
-
+  background: rgb(38, 78, 158);
+  background: linear-gradient(
+    0deg,
+    rgba(38, 78, 158, 1) 0%,
+    rgba(255, 255, 255, 1) 61%
+  );
+  min-width: 200px;
+  max-width: 250px;
+  padding: 10px;
+  border: 1px solid rgba(38, 78, 158, 1);
 }
 
-
 .contenido {
-    display: flex;
+  display: flex;
 }
 
 #side_nav h1 {
-    text-align: center;
+  text-align: center;
 }
 
-
 .contenido-principal {
-    min-height: 60vh;
-    margin: 0px;
+  min-height: 60vh;
+  margin: 0px;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 i {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 .sidebar .tabs .tab a[data-switcher] {
-    display: block;
-    padding: 15px;
-    cursor: pointer;
+  display: block;
+  padding: 15px;
+  cursor: pointer;
 }
 
-
 .sidebar .tabs .tab.is-active a[data-switcher] {
-
-    background-color: rgba(38, 78, 158, 1);
-    color: white;
-    font-weight: 700;
+  background-color: rgba(38, 78, 158, 1);
+  color: white;
+  font-weight: 700;
 }
 
 .sidebar .tabs .tab:hover a[data-switcher] {
-
-    background-color: rgba(38, 78, 158, 1);
-    color: white;
-    font-weight: 700;
+  background-color: rgba(38, 78, 158, 1);
+  color: white;
+  font-weight: 700;
 }
 
 .containerPages {
-    padding: 10px;
-    flex: 1;
-    margin: 10px;
-    padding-left: 142px;
-    border-radius: 8px;
-    background-color: #FFf;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 2);
-
-
-
+  padding: 10px;
+  flex: 1;
+  margin: 10px;
+  padding-left: 142px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 2);
 }
 
-
 .containerPages .pages {
-    display: none;
+  display: none;
 }
 
 .containerPages .pages.is-active {
-    display: block;
+  display: block;
 }

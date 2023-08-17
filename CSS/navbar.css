@@ -71,3 +71,21 @@ ul li ul:hover {
 .caret {
   animation: moverRotar 0.01s forwards; /*fill-mode: forwards para que mantenga su estado final */
 }
+
+footer {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px -4px 4px -2px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+footer p {
+  margin: 5px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #000000;
+  margin: 5px;
+}
