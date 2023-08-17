@@ -184,3 +184,9 @@ article i {
     background: rgba(255, 255, 255, 0.226);
     border-radius: 20px;
 }
+
+/* ICONOS FONTAWESOME */
+svg {
+    fill: #357abe;
+    margin-bottom: 10px;
+}
