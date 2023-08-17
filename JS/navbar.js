@@ -12,3 +12,15 @@ function myFunction() {
   }
 }
 
+// CARET FLIP SCRIPT
+$(document).ready(function() {
+  $(".repre").hover(
+    function() {
+      $(this).find(".bi-caret-down-fill").addClass("caret");
+    },
+    function() {
+      $(this).find(".bi-caret-down-fill").removeClass("caret");
+    }
+    );
+  });
+  
