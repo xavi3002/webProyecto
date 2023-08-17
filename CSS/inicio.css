@@ -131,13 +131,15 @@ footer a {
 #board-Servicios {
   text-align: center;
   margin: 20px;
+  margin-top: 50px;
+  margin-bottom: 150px;
 }
 
 article {
   border: 1px solid rgba(38, 78, 158, 1);
-  height: 220px;
+  height: 250px;
   border-radius: 10px;
-  background-color: rgb(223, 223, 223);
+  background-color: rgba(235, 235, 235, 0.793);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,7 +150,7 @@ article i {
 }
 
 .container article {
-  margin: 10px 0px 5px 0px;
+  margin: 10px 0px 10px 0px;
 }
 
 .botonServicio {
@@ -181,7 +183,78 @@ article i {
 }
 
 /* ICONOS FONTAWESOME */
-svg {
+div > svg {
   fill: #357abe;
   margin-bottom: 10px;
+}
+
+/* NOTICIAS */
+.noti-title {
+  text-align: center;
+}
+.noticias-body {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 150px;
+}
+.slider {
+  max-width: 1100px;
+  display: flex;
+}
+.slider .card {
+  flex: 1;
+  margin: 0 10px;
+  background: #fff;
+}
+.slider .card .img {
+  height: 200px;
+  width: 100%;
+}
+.slider .card .img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.slider .card .content {
+  padding: 10px 20px;
+}
+.card .content .title {
+  font-size: 20px;
+  font-weight: 600;
+}
+.card .content .sub-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #357abe;
+  line-height: 20px;
+}
+.card .content p {
+  text-align: justify;
+  margin: 10px 0;
+}
+.card .content .btn {
+  display: block;
+  text-align: left;
+  margin: 10px 0;
+}
+.card .content .btn button {
+  background: #357abe;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.card .content .btn button:hover {
+  transform: scale(0.9);
+}
+
+.card{
+  height: 520px;
 }
