@@ -72,7 +72,7 @@ window.addEventListener("load", async ()=>{
                 form.txtTitulo.value = noticiaSeleccionada.titulo;
                 form.txtFecha.value = noticiaSeleccionada.fecha;
                 form.txtDetalleNot.value = noticiaSeleccionada.detalle;
-                form.txtImagen.value = noticiaSeleccionada.imagen;
+                //form.txtImagen.value = noticiaSeleccionada.imagen;
                 form.btnGuardar.innerText = "Modificar";
 
                 editStatus = true;
@@ -89,19 +89,18 @@ form.addEventListener("submit", async (ev)=>{
     let titulo = form.txtTitulo.value;
     let fecha = form.txtFecha.value;
     let detalle = form.txtDetalleNot.value;
-    let imagen = form.txtImagen.value;
+    //let imagen = form.txtImagen.value;
 
     if (!editStatus){
-        await onInsert({titulo, fecha, detalle, imagen});
+        await onInsert({titulo, fecha, detalle});
         alert("Registro almacenado correctamente.");
     } else {
-        await onUpdate(idSeleccionado, {titulo, fecha, detalle, imagen});
+        await onUpdate(idSeleccionado, {titulo, fecha, detalle});
         alert("Registro actualizado correctamente");
     }
 
     editStatus = false;
     idSeleccionado = "";
     form.btnGuardar.innerText = "Guardar";
-    
     form.reset();
 });

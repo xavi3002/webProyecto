@@ -96,9 +96,6 @@ window.addEventListener("load", async()=>{
                 form.txtAutor.value= contactoSeleccionado.autor;
                 form.txtFecha.value= contactoSeleccionado.fecha;
                 form.txtDescripcion.value= contactoSeleccionado.descripcion;
-                
-                
-
                 form.btnGuardar.innerText="Modificar servicio";
 
                 estadoEditar=true;
@@ -132,6 +129,7 @@ form.addEventListener("submit", async (ev) =>{
 
 
     if (!estadoEditar){
+        console.log("entro insert");
         await onInsert({
             titulo, 
             subtitulo,
@@ -142,6 +140,7 @@ form.addEventListener("submit", async (ev) =>{
     
         })
     }else{
+        console.log("entro update");
         await onUpdate (idSeleccionado, {titulo, subtitulo,autor, fecha,descripcion });
        
     }
