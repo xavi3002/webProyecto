@@ -66,13 +66,13 @@
             </ul>
         </div>
         <div class="contact-in">
-            <h1>Send a Message</h1>
-            <form>
-                <input type="text" placeholder="Nombre completo" class="contact-in-input">
-                <input type="text" placeholder="Correo electronico" class="contact-in-input">
-                <input type="text" placeholder="Tema" class="contact-in-input">
-                <textarea placeholder="Mensaje" class="contact-in-textarea"></textarea>
-                <input type="submit" value="SUBMIT" class="contact-in-btn">
+            <h1>Formulario soporte</h1>
+            <form id="frm">
+                <input type="text" placeholder="Nombre completo" class="contact-in-input form-control" id="txtNombre" required>
+                <input type="text" placeholder="Correo electronico" class="contact-in-input form-control" id="txtEmail" required>
+                <input type="text" placeholder="Tema" class="contact-in-input form-control" id="txtTema"required>
+                <textarea placeholder="Mensaje" class="contact-in-textarea form-control" id="txtMensaje" required></textarea>
+                <button id="btnEnviar  " class="btn btn-light text-dark"> Enviar</button>
             </form>
         </div>
         <div class="contact-in">
@@ -93,6 +93,11 @@
         </p>
         <p>&copy; PuenteGlobalCR.com</p>
     </footer>
+
+
+
+
+
     <!-- scripts -->
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -103,5 +108,14 @@
         crossorigin="anonymous"></script>
 
     <script src="../JS/navbar.js"></script>
+
+     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+
+    <script src="../JS/firebaseConfig.js"></script>
+    <script src="../JS/contacto/contactoMain.js"></script>
+    
+    
 </body>
 </html>

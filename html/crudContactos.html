@@ -39,7 +39,7 @@
 
     <div class="container-fluid mt-4 mb-4" style="text-align: center;">
         <div style="display: inline-flex;">
-            <h1><strong>Mantenimiento de contacto</strong></h1>
+            <h1><strong>Solicitudes de contacto</strong></h1>
         </div>
         <a href="vistaAdmin.html"><button class="btn btn-info" style="float: right;">&#8592 Regresar</button></a>
     </div>
@@ -49,36 +49,18 @@
     <div class="container-fluid ">
 
         <div class="row">
-            <div class="col-6">
-                <form action="" id="frm">
-
-                    <div class="form-group pt-2 mt-3">
-                        <h5>Teléfono:</h5>
-                        <input type="text" name="txtTelefono" id="txtTelefono" class="form-control" required>
-                    </div>
-
-                    <div class="form-group mt-3">
-                        <h5>Correo electrónico:</h5>
-                        <input type="text" name="txtCorreo" id="txtCorreo" class="form-control" required>
-                    </div>
-
-                    <div class="form-group mt-3">
-                        <h5>Dirección:</h5>
-                        <input type="text" name="txtDireccion" id="txtDireccion" class="form-control">
-                    </div>
-
-                    <button id="btnGuardar" class="btn btn-success mt-4">Registrar contacto</button>
-                </form>
-            </div>
+            
 
             <!--LISTA-->
-            <div class="col-6">
+            <div class="col-12">
                 <table id="tblDatos" class="table table-striped" style="text-align: center;">
                     <thead>
                         <tr>
-                            <th>Teléfono</th>
+                            <th>Nombre</th>
                             <th>Correo electrónico </th>
-                            <th>Dirección</th>
+                            <th>Tema</th>
+                            <th>Mensaje</th>
+                            <th>Estado</th>
                             <th></th>
                         </tr>
 
@@ -87,7 +69,35 @@
                 </table>
             </div>
         </div>
+
+
+        <div class="formulario">
+            <form id="frm">
+                <h5 id="labelTitulo1" style="visibility: hidden;" >Nombre</h5>
+                <input type="text" placeholder="Nombre completo" class="contact-in-input form-control" id="txtNombre" style="visibility: hidden;">
+                <br>
+                <h5 id="labelTitulo2"  style="visibility: hidden;">Correo electronico</h5>
+                <input type="text" placeholder="Correo electronico" class="contact-in-input form-control" id="txtEmail" style="visibility: hidden;">
+                <br>
+                <h5 id="labelTitulo3"   style="visibility: hidden;">Tema</h5>
+                <input type="text" placeholder="Tema" class="contact-in-input form-control" id="txtTema" style="visibility: hidden;">
+                <br>
+                <h5 id="labelTitulo4"   style="visibility: hidden;" >Estado</h5>
+                <input type="text" placeholder="Tema" class="contact-in-input form-control" id="txtEstado" style="visibility: hidden;">
+                <br>
+                <h5 id="labelTitulo5"   style="visibility: hidden;">Mensaje</h5>
+                <textarea placeholder="Mensaje" class="contact-in-textarea form-control" id="txtMensaje" style="visibility: hidden;"></textarea >
+                <br>
+                <button id="btnEnviar" class="btn btn-primary text-light" style="display: none"> Modificar</button >
+            </form>
+        </div>
+
     </div>
+
+
+
+
+
 
 
     <!--FIREBASE-->
@@ -105,9 +115,16 @@
 
 
         <script src="../JS/firebaseConfig.js"></script>
+        <script src="../JS/contacto/contactoAdmin.js"></script>
+         
         <!-- Se llama a JQuery -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="../JS/navbar.js"></script>
+
+
+        
+
+
 </body>
 
 </html>
