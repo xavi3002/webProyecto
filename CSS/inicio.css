@@ -167,7 +167,7 @@ div > svg {
 }
 
 /* NOTICIAS */
-.noti-title {
+/*.noti-title {
   text-align: center;
 }
 .noticias-body {
@@ -231,8 +231,14 @@ div > svg {
 }
 .card .content .btn button:hover {
   transform: scale(0.9);
-}
+}*/
 
 .card{
-  height: 520px;
+  width: 100%;
+}
+
+.carousel-item{
+
+  text-align: center;
+  
 }

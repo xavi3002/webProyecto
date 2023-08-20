@@ -141,70 +141,65 @@
         </div>
     </section>
     <br>
+
+
+    
     <!--NOTICIAS-->
-    <div class="noti-title">
+    
+    <h1 style="text-align: center;">Noticias</h1>
+    <div id="carouselExampleControlsNoTouching" class="carousel slide m-5" data-bs-touch="false">
+            <div class="carousel-inner" id="carouselContainer">
+                <div class="carousel-item active">
+
+                    <div class="card" >
+                        <img src="../pictures/CasaAmarillaTarde.avif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">ejemplo 1</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        
+                        </div>
+                    </div>
+
+                </div>
+                <div class="carousel-item">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../pictures/CasaAmarillaNoche.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">ejemplo 2</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        
+                        </div>
+                    </div>
+                </div>
+                
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
+      </div>
+
+   <!--  <div class="noti-title">
         <h1>Noticias</h1>
         <p>Manténgase en contacto con los últimos avances revisando regularmente nuestras noticias</p>
     </div>
     <div class="noticias-body">
-        <div class="slider owl-carousel">
-            <div class="card">
-                <div class="img">
-                    <img src="../pictures/11106015-banderas-de-diferentes-paýses-se-estýn-desarrollando-en-las-astas-transformed.webp"
-                        alt="">
-                </div>
-                <div class="content">
-                    <div class="title">
-                        Viceministra llega a Brasilia para atender consultas políticas</div>
-                    <div class="sub-title">
-                        AGOSTO 16, 2023</div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi
-                        nihil
-                        minus sed unde voluptas cumque.</p>
-                    <div class="btn">
-                        <button>Leer más</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="img">
-                    <img src="../pictures/nosotros.jpg" alt="">
-                </div>
-                <div class="content">
-                    <div class="title">
-                        El potencial de estrechar lazos con Letonia</div>
-                    <div class="sub-title">
-                        AGOSTO 15, 2023</div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi
-                        nihil
-                        minus sed unde voluptas cumque.</p>
-                    <div class="btn">
-                        <button>Leer más</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="img">
-                    <img src="../pictures/stock-photo-flags-against-blue-sky-1264758943-transformed.jpeg" alt="">
-                </div>
-                <div class="content">
-                    <div class="title">
-                        Nueva embajadora de Israel presenta copias de estilo de Cartas Credenciales</div>
-                    <div class="sub-title">
-                        AGOSTO 15, 2023</div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi
-                        nihil
-                        minus sed unde voluptas cumque.</p>
-                    <div class="btn">
-                        <button>Leer más</button>
-                    </div>
-                </div>
-            </div>
+        <div class="slider owl-carousel" id="CarouselNoticia">
+            
+            
+                
+                
+                
+                
+            
+            
         </div>
-    </div>
+    </div>-->
     <br>
     <!--CONOZCA-->
     <div class="conoce">
@@ -228,6 +223,17 @@
         <p>&copy; PuenteGlobalCR.com</p>
     </footer>
 
+
+
+
+    <!--
+        Firebase
+    -->
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+
     <!--SCRIPTS-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
@@ -236,8 +242,14 @@
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
         crossorigin="anonymous"></script>
 
+
+
     <script src="../JS/navbar.js"></script>
     <script src="../JS/inicio.js"></script>
+    <script src="../JS/firebaseConfig.js"></script>
+    <script src="../JS/noticia/noticiaGeneral.js"></script>
+
+
 
 </body>
 </html>
