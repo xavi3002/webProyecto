@@ -59,6 +59,12 @@ ul li ul:hover {
   display: block;
   padding-top: 20px;
 }
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
 
 @keyframes moverRotar {
   from {

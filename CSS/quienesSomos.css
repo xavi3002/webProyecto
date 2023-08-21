@@ -13,7 +13,6 @@
   text-underline-offset: 5px;
 }
 
-
 .header {
   padding: 170px;
   background-image: url("https://elmundo.cr/wp-content/uploads/2017/06/DSC_31500002270116.jpg");
@@ -27,7 +26,6 @@
   text-shadow: 5px 5px 5px #000000;
 }
 
-
 .marquee-container {
   overflow: hidden;
   white-space: nowrap;
@@ -39,13 +37,12 @@
 
 @keyframes marquee {
   0% {
-      transform: translateX(100%);
+    transform: translateX(100%);
   }
   100% {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
-
 
 .image-text-section {
   display: flex;
@@ -80,7 +77,6 @@
   text-align: justify;
 }
 
-
 .background-section {
   /*background-image: url('https://palmsrealtycr.com/wp-content/uploads/2016/01/scarlet-macaw-parrots-new-hd-wallpapers-free-downlaod-birds-pictures.jpg');  Ruta de la imagen de fondo */
   background-image: url(../pictures/imagenfodno.jpg);
@@ -96,7 +92,6 @@
   background-blend-mode: multiply;
 }
 
-
 #preguntas {
   padding: 10px;
   margin: 20px;
@@ -104,12 +99,11 @@
   text-align: justify;
 }
 
-
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Barlow';
+  font-family: "Barlow";
 }
 
 .card {
@@ -128,7 +122,6 @@
   margin-bottom: 10px;
 }
 
-
 .card-title {
   font-size: 20px;
   margin-bottom: 10px;
@@ -138,12 +131,10 @@
   margin-bottom: 10px;
 }
 
-
-#autores{
+#autores {
   text-align: center;
 }
 
-
-#autores{
+#autores {
   text-align: center;
 }
