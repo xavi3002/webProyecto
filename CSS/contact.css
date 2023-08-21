@@ -10,6 +10,7 @@ body {
   height: 100vh;
   display: grid;
   align-items: center;
+  font-family: 'Poppins', sans-serif;
 }
 
 .contact-wrap {
@@ -96,7 +97,6 @@ body {
 .contact-in ul li a i {
   font-size: 14px;
   line-height: 30px;
-  background: #000;
   color: #fff;
 }
 
