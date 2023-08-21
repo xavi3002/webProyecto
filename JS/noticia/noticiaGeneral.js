@@ -39,35 +39,29 @@ window.addEventListener("load", async()=>{
             if (contador ==0){
                 carousel.innerHTML+= ` 
                 <div class="carousel-item active">
-                    <div class="card" >
-                       
+                    <div class="card">
+                        <img src="../pictures/nosotros.jpg" alt="..." style="height: 200px; width: 100%;object-fit: cover;">
                         <div class="card-body">
-                        <h5 class="card-title">${dato.titulo}</h5>
-                        <p class="card-text">Fecha: ${dato.fecha}
-                            <br>
-                            ${dato.detalle}
-                        </p>
-                        
+                            <h5 class="card-title">${dato.titulo}</h5>
+                            <p class="fecha">${dato.fecha}</p>
+                            <p class="card-text">${dato.detalle}</p>
                         </div>
                     </div>
-                </div> `;
+                </div>`;
 
                 contador++;
             }else{
                 carousel.innerHTML+= ` 
                 <div class="carousel-item">
                     <div class="card">
-                        
+                        <img src="../pictures/nosotros.jpg" alt="..." style="height: 200px; width: 100%;object-fit: cover;">
                         <div class="card-body">
-                        <h5 class="card-title">${dato.titulo}</h5>
-                        <p class="card-text">Fecha: ${dato.fecha}
-                            <br>
-                            ${dato.detalle}
-                        </p>
-                        
+                            <h5 class="card-title">${dato.titulo}</h5>
+                            <p class="fecha">${dato.fecha}</p>
+                            <p class="card-text">${dato.detalle}</p>
                         </div>
                     </div>
-                </div> `;
+                </div>`;
             }
        
         });

@@ -30,7 +30,6 @@ p {
   line-height: 25px;
 }
 
-
 .sticky {
   position: fixed;
   top: 0;
@@ -103,7 +102,6 @@ p {
   }
 }
 
-
 /*SERVICIOS DASHBOARD*/
 
 #board-Servicios {
@@ -170,6 +168,7 @@ div > svg {
 .noti-title {
   text-align: center;
 }
+/*
 .noticias-body {
   display: grid;
   height: 100%;
@@ -231,14 +230,38 @@ div > svg {
 }
 .card .content .btn button:hover {
   transform: scale(0.9);
-}
-/* 
-.card{
-  width: 100%;
-}
-
-.carousel-item{
-
-  text-align: center;
-  
 } */
+
+.card {
+  flex: 1;
+  background: #fff;
+}
+
+.carousel-item {
+  text-align: center;
+}
+
+/* .carousel-item{
+  background: red;
+  max-width: 1000px;
+} */
+
+
+.carousel-control-prev:hover, .carousel-control-next:hover{
+  background-color: #c5c5c5bc;
+}
+.card-title{
+  font-size: 20px;
+  font-weight: 600;
+}
+.fecha{
+  font-size: 12px;
+  font-weight: 600;
+  color: #357abe;
+  line-height: 20px;
+}
+
+.card-text{
+  text-align: justify;
+  margin: 10px 0;
+}
