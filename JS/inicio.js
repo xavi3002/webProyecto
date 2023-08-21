@@ -1,14 +1,6 @@
-/* STICKY NAVBAR SCRIPT */
-window.onscroll = function() { myFunction() };
-
-var navbar = document.querySelector("nav");
-var sticky = navbar.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky");
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-
+$(".slider").owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 4000, //2000ms = 2s;
+    autoplayHoverPause: true, //cuando este en hover, no avanza
+});

@@ -1,0 +1,50 @@
+.header {
+  padding: 70px;
+  background-image: url(../pictures/CasaAmarillaTarde.avif);
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 5px 5px 5px #000000;
+}
+.btnAdmn {
+  color: white;
+  font-size: 20px;
+  padding: 14px 40px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+}
+.btn-noti {
+  background-color: #357abe;
+}
+.btn-extr {
+  background-color: #3d315b;
+}
+.btn-nac {
+  background-color: #4bc6b9;
+}
+.btn-serv {
+  background-color: #b57ba6;
+}
+.btn-cont {
+  background-color: #c6ac8f;
+}
+.btn-group {
+  position: static;
+}
+.btnAdmn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.btnAdmn:active {
+  transform: translateY(2px);
+}
+
+.cont{
+    text-align: center;
+}
