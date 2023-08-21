@@ -80,6 +80,34 @@ p {
   border-color: #357abe;
 }
 
+
+.button-42 {
+  background-color: #357abe;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  height: 44px;
+  line-height: 44px;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  vertical-align: top;
+  width: auto;
+  border: 0;
+}
+
+.button-42:hover {
+  background: #ffffff9a;
+  color: #357abe;
+  font-weight: bold;
+  text-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  border-color: #357abe;
+}
+
 /* Parte de conectemos costa rica con el mundo, loros */
 .background-section {
   /*background-image: url('https://palmsrealtycr.com/wp-content/uploads/2016/01/scarlet-macaw-parrots-new-hd-wallpapers-free-downlaod-birds-pictures.jpg');  Ruta de la imagen de fondo */
@@ -108,13 +136,13 @@ p {
   text-align: center;
   margin: 20px;
   margin-top: 50px;
-  margin-bottom: 150px;
+  
 }
 
 article {
   border: 1px solid rgba(38, 78, 158, 1);
   height: 250px;
-  border-radius: 10px;
+  border-radius: 10px; 
   background-color: rgba(235, 235, 235, 0.793);
   display: flex;
   align-items: center;

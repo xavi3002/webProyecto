@@ -15,6 +15,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 
+    <style>
+        #principal {
+    margin: 20px;
+    padding: 20px;
+   
+}
+
+#principal p {
+    text-align: justify;
+}
+
+.contenidoCaja {
+    padding: 20px;
+    transition: transform 0.3s; 
+}
+
+.contenidoCaja:hover {
+    transform: scale(1.1); 
+}
+    </style>
+
 </head>
 <body>
     <!--NAVBAR-->
@@ -44,8 +65,9 @@
     <div class="header">
         <h1>Bienvenido a Puente Global</h1>
     </div>
+    
     <!--INTRO-->
-    <section>
+    <section id="principal">
         <p><span style="color: #357ABE; font-weight: bold;">¡Bienvenido a puente global Costa Rica!</span> Somos una
             plataforma en línea dedicada a fomentar la conexión entre Costa Rica
             y el mundo. Nuestro objetivo de servir como un puente virtual que une representaciones de otros países en
@@ -69,13 +91,14 @@
 
     </section>
     <!--SERVICIOS-->
-    <br>
+    
     <section id="board-Servicios">
         <div class="container">
             <header class="section-header">
                 <h2>Catálogo de servicios</h2>
-                <p>Nuestra misión es proporcionar un excelente servicio de calidad en el menor tiempo posible, entre los
-                    tipos de servicios que ofrecemos se encuentran: </p>
+                <p>Explora nuestro completo catálogo de servicios diseñados en colaboración con la cancillería, donde brindamos 
+                    oportunidades laborales, becas inspiradoras, inmunidades necesarias y orientación en asuntos de culto, todo 
+                    con el objetivo de enriquecer tu experiencia y promover un futuro lleno de posibilidades. </p>
             </header>
             <div class="row">
                 <div class="col col-sm-3">
@@ -131,10 +154,11 @@
                     </article>
                 </div>
             </div>
+            <br>
             <div class="row">
                 <div class="col-12">
                     <a href="servicioPublico.html">
-                        <button class="btn btn-primary mt-2" style="text-align: center;" onclick="">Conocer nuestros
+                        <button class="button-42" style="text-align: center;" onclick="">Conocer nuestros
                             servicios disponibles</button>
                     </a>
 
@@ -143,12 +167,32 @@
         </div>
     </section>
     <br>
+    <br>
+    
 
-    <!--NOTICIAS-->
 
+
+    
+    <!--CONOZCA-->
+    <div class="conoce">
+        <h1>Conozca Costa Rica</h1>
+        <p>Conocer un país significa sentir su espíritu, conocer sus paisajes escondidos y las personas que han hecho lo
+            que es.
+            Únase a nuestros numerosos turistas que ya han descubierto por qué Costa Rica es irresistible. Esperamos que
+            llegue a amar nuestro país tanto como nosotros.</p>
+        <button class="button-41" role="button"
+            onclick="window.location.href='https://www.visitcostarica.com/es/costa-rica/general-information';">Más
+            información</button>
+    </div>
+
+        <!--NOTICIAS-->
+
+
+
+    <br>
     <div class="noti-title">
         <h1>Noticias</h1>
-        <p>Manténgase en contacto con los últimos avances revisando regularmente nuestras noticias</p>
+        <p>Manténgase en actualizado con los últimos avances revisando regularmente nuestras noticias</p>
     </div>
     <div style="display: flex; align-items: center; justify-content: center">
         <div id="carouselExampleControlsNoTouching" class="carousel slide m-2" data-bs-touch="false"
@@ -169,24 +213,15 @@
         </div>
     </div>
     <br>
-    <!--CONOZCA-->
-    <div class="conoce">
-        <h1>Conozca Costa Rica</h1>
-        <p>Conocer un país significa sentir su espíritu, conocer sus paisajes escondidos y las personas que han hecho lo
-            que es.
-            Únase a nuestros numerosos turistas que ya han descubierto por qué Costa Rica es irresistible. Esperamos que
-            llegue a amar nuestro país tanto como nosotros.</p>
-        <button class="button-41" role="button"
-            onclick="window.location.href='https://www.visitcostarica.com/es/costa-rica/general-information';">Más
-            información</button>
-    </div>
+
+    
     <!--FOOTER-->
     <footer>
         <img src="../pictures/LogoPrincipal.jpg" alt="Logo" style="width: 30%;">
         <p>
-            <a href="!#">Representaciones</a> |
-            <a href="!#">Contacto</a> |
-            <a href="!#">¿Quiénes somos?</a>
+            <a href="RepresentacionesCostaRica.html">Representaciones</a> |
+            <a href="Contactenos.html">Contacto</a> |
+            <a href="quienesSomos.html">¿Quiénes somos?</a>
         </p>
         <p>&copy; PuenteGlobalCR.com</p>
     </footer>

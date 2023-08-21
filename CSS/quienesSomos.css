@@ -1,4 +1,149 @@
+@font-face {
+  font-family: Gontserrat;
+  src: url(../fonts/Gontserrat-Regular.ttf);
+}
+
+* {
+  font-family: Gontserrat !important;
+  box-sizing: border-box;
+}
+
 .quienesSomos {
   text-decoration: underline;
   text-underline-offset: 5px;
+}
+
+
+.header {
+  padding: 170px;
+  background-image: url("https://elmundo.cr/wp-content/uploads/2017/06/DSC_31500002270116.jpg");
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 5px 5px 5px #000000;
+}
+
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-text {
+  animation: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+
+.image-text-section {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.image-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-container {
+  flex: 2;
+}
+
+.text-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.text-container p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+
+.background-section {
+  /*background-image: url('https://palmsrealtycr.com/wp-content/uploads/2016/01/scarlet-macaw-parrots-new-hd-wallpapers-free-downlaod-birds-pictures.jpg');  Ruta de la imagen de fondo */
+  background-image: url(../pictures/imagenfodno.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 130px;
+  font-size: 30px;
+  text-shadow: 5px 5px 5px #000000;
+  text-align: center;
+  color: #fff;
+  background-color: rgb(160, 159, 159);
+  background-blend-mode: multiply;
+}
+
+
+#preguntas {
+  padding: 10px;
+  margin: 20px;
+  line-height: 25px;
+  text-align: justify;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Barlow';
+}
+
+.card {
+  width: 230px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+
+
+.card-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  margin-bottom: 10px;
+}
+
+
+#autores{
+  text-align: center;
+}
+
+
+#autores{
+  text-align: center;
 }
