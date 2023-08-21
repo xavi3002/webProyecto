@@ -187,15 +187,18 @@ body {
   }
 }
 
+.fa:hover {
+  opacity: 0.7;
+}
 
 .fa-facebook {
-  background: #000;
+  background: transparent;
   color: white;
 }
 
 
 .fa-twitter {
-  background: #000;
+  background: transparent;
   color: white;
 }
 
