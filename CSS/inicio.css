@@ -30,7 +30,6 @@ p {
   line-height: 25px;
 }
 
-
 .conoce {
   padding: 120px;
   background-image: url(../pictures/patricia-palacin-EitAJO7TDLk-unsplash.jpg);
@@ -73,7 +72,6 @@ p {
   text-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
   border-color: #357abe;
 }
-
 
 .button-42 {
   background-color: #357abe;
@@ -130,13 +128,12 @@ p {
   text-align: center;
   margin: 20px;
   margin-top: 50px;
-  
 }
 
 article {
   border: 1px solid rgba(38, 78, 158, 1);
   height: 250px;
-  border-radius: 10px; 
+  border-radius: 10px;
   background-color: rgba(235, 235, 235, 0.793);
   display: flex;
   align-items: center;
@@ -268,22 +265,40 @@ div > svg {
   max-width: 1000px;
 } */
 
-
-.carousel-control-prev:hover, .carousel-control-next:hover{
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
   background-color: #c5c5c5bc;
 }
-.card-title{
+.card-title {
   font-size: 20px;
   font-weight: 600;
 }
-.fecha{
+.fecha {
   font-size: 12px;
   font-weight: 600;
   color: #357abe;
   line-height: 20px;
 }
 
-.card-text{
+.card-text {
   text-align: justify;
   margin: 10px 0;
+}
+
+#principal {
+  margin: 20px;
+  padding: 20px;
+}
+
+#principal p {
+  text-align: justify;
+}
+
+.contenidoCaja {
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.contenidoCaja:hover {
+  transform: scale(1.1);
 }
