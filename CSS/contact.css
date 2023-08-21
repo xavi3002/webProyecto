@@ -187,6 +187,18 @@ body {
   }
 }
 
+
+.fa-facebook {
+  background: #000;
+  color: white;
+}
+
+
+.fa-twitter {
+  background: #000;
+  color: white;
+}
+
 h2 > svg {
   fill: white;
 }
