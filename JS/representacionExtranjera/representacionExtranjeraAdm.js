@@ -148,7 +148,7 @@ ev.preventDefault();
         let imagenUrl;
 
     if (estadoEditar==false){
-        await uploadImage();
+    
 
     // referencia con firestore
     const ref = firebase.storage().ref();

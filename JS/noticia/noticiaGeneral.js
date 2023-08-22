@@ -40,7 +40,7 @@ window.addEventListener("load", async()=>{
                 carousel.innerHTML+= ` 
                 <div class="carousel-item active">
                     <div class="card">
-                        <img src="../pictures/nosotros.jpg" alt="..." style="height: 200px; width: 100%;object-fit: cover;">
+                    <img src="${dato.imagenUrl}" alt="..." style="height: 200px; width: 100%;object-fit: cover;">
                         <div class="card-body">
                             <h5 class="card-title">${dato.titulo}</h5>
                             <p class="fecha">${dato.fecha}</p>
@@ -54,7 +54,7 @@ window.addEventListener("load", async()=>{
                 carousel.innerHTML+= ` 
                 <div class="carousel-item">
                     <div class="card">
-                        <img src="../pictures/nosotros.jpg" alt="..." style="height: 200px; width: 100%;object-fit: cover;">
+                        <img src="${dato.imagenUrl}" alt="..." style="height: 200px; width: 100%;object-fit: cover;">
                         <div class="card-body">
                             <h5 class="card-title">${dato.titulo}</h5>
                             <p class="fecha">${dato.fecha}</p>
