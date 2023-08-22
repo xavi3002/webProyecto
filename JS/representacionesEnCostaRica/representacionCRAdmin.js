@@ -57,6 +57,7 @@ window.addEventListener("load", async()=>{
                         <td>${dato.Email}</td>
                         <td>${dato.Atencion}</td>
                         <td>${dato.Horas}</td>
+                        <td><img src="${dato.imagenUrl}" style= "height:100px ; width:200px"</td>
                         <td></td>
                         
 
@@ -105,6 +106,7 @@ window.addEventListener("load", async()=>{
                 form.txtEmail.value= contactoSeleccionado.Email;
                 form.txtHoras.value= contactoSeleccionado.Horas;
                 form.txtAtencion.value= contactoSeleccionado.Atencion;
+
                 
 
                 form.btnGuardar.innerText="Modificar representacion de cr en el extranjero";
@@ -118,10 +120,12 @@ window.addEventListener("load", async()=>{
 
 // 7- configurar el submit 
 
+// 7- configurar el submit 
+var ejecutar = false;
 form.addEventListener("submit", async (ev) =>{
-    ev.preventDefault();
+ev.preventDefault();
 
-    // cajas de texto
+
     let pais = form.txtPais.value;
     let ciudad = form.txtCiudad.value;
     let Direccion = form.txtDireccion.value;
@@ -130,27 +134,79 @@ form.addEventListener("submit", async (ev) =>{
     let Email = form.txtEmail.value;
     let Horas = form.txtHoras.value;
     let Atencion = form.txtAtencion.value;
+    let imagenUrl;
 
+    if (estadoEditar==false){
+        
+    // referencia con firestore
+    const ref = firebase.storage().ref();
 
-    if (!estadoEditar){
-        await onInsert({
-            pais, 
+    // se agarra el file
+    const file = document.querySelector("#txtFile").files[0];
+
+    // se le crea un nuevo nombre
+    const name = new Date () + '-' + file.name;
+   
+    const metadata = {
+        contentType:file.type
+
+    }
+
+    const task = ref.child(name).put(file,metadata)
+
+    task
+    .then(snapshot => snapshot.ref.getDownloadURL())
+    .then(url => {
+       
+        alert("Image upload succesfull")
+        
+        
+        imagenUrl = url
+        
+            
+           
+                onInsert({
+                    pais, 
+                    ciudad,
+                    Direccion,
+                    CodigoPostal,
+                    telefono,
+                    Email,
+                    Horas,
+                    Atencion,
+                    imagenUrl
+            
+                    
+                })
+            
+            
+        })
+    }else{
+        await onUpdate (idSeleccionado, {pais, 
             ciudad,
             Direccion,
             CodigoPostal,
             telefono,
             Email,
             Horas,
-            Atencion
-    
-    
-        })
-    }else{
-        await onUpdate (idSeleccionado, {pais, ciudad,Direccion, CodPostal,Telefono,Fax, Email,Horas,Atencion });
-       
+            Atencion});
+
+
+        estadoEditar=false;
+        idSeleccionado="";
+        form.btnGuardar.innerText="Registrar representacion de costa rica"
+        
     }
-    estadoEditar=false;
-    idSeleccionado="";
-    form.btnGuardar.innerText="Registrar representacion de costa rica"
+
     form.reset();
+    
+    
+
+        
+        
+
+    
+    
+
+
 })

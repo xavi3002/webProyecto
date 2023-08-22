@@ -53,6 +53,8 @@ window.addEventListener("load", async()=>{
                 <h2 class="accordion-header" id="Title${element.id}">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#${element.id}" aria-expanded="true" aria-controls="${element.id}">
                         ${dato.pais} - ${dato.ciudad}
+                        <br>
+                        
                         </button>
                 </h2>
 
@@ -64,6 +66,7 @@ window.addEventListener("load", async()=>{
                         <strong>Email:</strong> ${dato.Email}<br>
                         <strong>Atencion:</strong> ${dato.Atencion}<br>
                         <strong>Horas:</strong> ${dato.Horas}<br>
+                        <img src="${dato.imagenUrl}" style= "height:100px ; width:200px"/>
                     </div>
                 </div>
             </div>
