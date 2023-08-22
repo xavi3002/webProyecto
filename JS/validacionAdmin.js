@@ -11,4 +11,4 @@ const auth = firebase.auth();
             }
 
 
-        })
+    })

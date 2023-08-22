@@ -10,7 +10,7 @@ const btnRegistrar = document.querySelector("#btnRegistrar");
 
 
 const btnLogin = document.querySelector("#btnLogin");
-const btnLogout = document.querySelector("#btnLogout");
+
 
 btnRegistrar.addEventListener("click",()=>{
     let email = document.querySelector("#txtRegisterUser").value;

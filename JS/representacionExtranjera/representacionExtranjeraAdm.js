@@ -16,6 +16,8 @@ const form = document.querySelector("#frm");
 // que se agarre el tbody dentro de tbl datos
 const table = document.querySelector("#tblDatos>tbody")
 
+const fileTextBox= document.getElementById("txtFile");
+
 
 //---------------------------------------------------------5- Metodos del crud-------------------------------------------------------
 
@@ -112,9 +114,10 @@ window.addEventListener("load", async()=>{
                 form.txtHoras.value= contactoSeleccionado.Horas;
                 form.txtAtencion.value= contactoSeleccionado.Atencion;
                 
-
+                
                 form.btnGuardar.innerText="Modificar representacion";
-
+                document.getElementById("txtFile").style.visibility = 'Hidden';
+                document.getElementById("imageTitle").style.visibility = 'Hidden';
                 estadoEditar=true;
                 idSeleccionado=ev.target.dataset.id;
 
@@ -170,13 +173,12 @@ ev.preventDefault();
     .then(snapshot => snapshot.ref.getDownloadURL())
     .then(url => {
        
-        alert("Image upload succesfull")
+        alert("Imagen subida correctamente")
         
         
         imagenUrl = url
         
-            
-           
+        
                 onInsert({
                     titulo, 
                     direccion,
@@ -190,18 +192,16 @@ ev.preventDefault();
             
                     
                 })
-            
-
-            
-                
-
-            
         })
     }else{
+
+       
         onUpdate (idSeleccionado, {titulo, direccion, CodPostal,Telefono,Fax, Email,Horas,Atencion });
         estadoEditar=false;
         idSeleccionado="";
         form.btnGuardar.innerText="Registrar representacion extranjera"
+        document.getElementById("txtFile").style.visibility = 'visible';
+        document.getElementById("imageTitle").style.visibility = 'visible';
         
     }
 
@@ -218,10 +218,4 @@ ev.preventDefault();
 
 })
 
-// subir una imagen 
-
-function uploadImage(){
-    
-    
-}
 

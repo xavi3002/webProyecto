@@ -63,7 +63,7 @@
                     </div>
                     <div class="form-group">
                         <h5>Código Postal:</h5>
-                        <input type="text" name="txtCodPostal" id="txtCodPostal" class="form-control" required>
+                        <input type="number" min="1" name="txtCodPostal" id="txtCodPostal" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <h5>Teléfono:</h5>
@@ -89,8 +89,8 @@
                         <input type="text" name="txtAtencion" id="txtAtencion" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <h5>Imagen de portada:</h5>
-                        <input type="file" name="txtFile" id="txtFile" class="form-control" >
+                        <h5 id="imageTitle">Imagen de portada:</h5>
+                        <input type="file" name="txtFile" id="txtFile" class="form-control" accept="image/*" required>
                     </div>
                     <button id="btnGuardar" class="btn btn-success mt-2">Registrar representación extranjera</button>
                 </form>
