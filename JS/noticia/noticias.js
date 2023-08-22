@@ -77,6 +77,10 @@ window.addEventListener("load", async ()=>{
 
                 editStatus = true;
                 idSeleccionado = ev.target.dataset.id;
+
+
+                document.getElementById("txtFile").style.visibility = 'hidden';
+                document.getElementById("imageTitle").style.visibility = 'hidden';
             });
         });
     }); 
@@ -137,7 +141,8 @@ ev.preventDefault();
         estadoEditar=false;
         idSeleccionado="";
         form.btnGuardar.innerText="Registrar representacion extranjera"
-        
+        document.getElementById("txtFile").style.visibility = 'visible';
+        document.getElementById("imageTitle").style.visibility = 'visible';
     }
 
     form.reset();

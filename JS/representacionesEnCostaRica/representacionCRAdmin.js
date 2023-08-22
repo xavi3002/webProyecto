@@ -107,7 +107,8 @@ window.addEventListener("load", async()=>{
                 form.txtHoras.value= contactoSeleccionado.Horas;
                 form.txtAtencion.value= contactoSeleccionado.Atencion;
 
-                
+                document.getElementById("txtFile").style.visibility = 'hidden';
+                document.getElementById("imageTitle").style.visibility = 'hidden';
 
                 form.btnGuardar.innerText="Modificar representacion de cr en el extranjero";
 
@@ -195,7 +196,8 @@ ev.preventDefault();
         estadoEditar=false;
         idSeleccionado="";
         form.btnGuardar.innerText="Registrar representacion de costa rica"
-        
+        document.getElementById("txtFile").style.visibility = 'visible';
+        document.getElementById("imageTitle").style.visibility = 'visible';        
     }
 
     form.reset();
