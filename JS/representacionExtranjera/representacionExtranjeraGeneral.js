@@ -51,7 +51,7 @@ window.addEventListener("load", async()=>{
             
         <div class="col col-md-4>
             <div class="card">
-                    <img src="https://geopoliticaybanderas.files.wordpress.com/2015/12/alemania.png?w=500&h=300"
+                    <img src="${dato.imagenUrl}"
                         alt="Imagen 1" class="card-image">
                     <h3 class="card-title"> ${dato.titulo} </h3>
                     <p class="card-description">Direccion: ${dato.direccion} <br>Codigo postal: ${dato.CodPostal} <br>

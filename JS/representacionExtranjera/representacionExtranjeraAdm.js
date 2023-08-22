@@ -10,6 +10,7 @@ const db = firebase.firestore();
 const collectionString = "representacionExtranjeras";
 var estadoEditar = false;
 var idSeleccionado = "";
+var urlImagen = "";
 
 const form = document.querySelector("#frm");
 // que se agarre el tbody dentro de tbl datos
@@ -57,6 +58,7 @@ window.addEventListener("load", async()=>{
                         <td>${dato.Email}</td>
                         <td>${dato.Atencion}</td>
                         <td>${dato.Horas}</td>
+                        <td><img src="${dato.imagenUrl}" style= "height:100px ; width:200px"</td>
                         <td></td>
                         
 
@@ -130,44 +132,96 @@ window.addEventListener("load", async()=>{
 });
 
 // 7- configurar el submit 
-
+var ejecutar = false;
 form.addEventListener("submit", async (ev) =>{
-    ev.preventDefault();
-
-    // cajas de texto
-    let titulo = form.txtTitulo.value;
-    let direccion = form.txtDireccion.value;
-    let CodPostal = form.txtCodPostal.value;
-    let Telefono = form.txtTelefono.value;
-    let Fax = form.txtFax.value;
-    let Email = form.txtEmail.value;
-    let Horas = form.txtHoras.value;
-    let Atencion = form.txtAtencion.value;
+ev.preventDefault();
 
 
-    if (!estadoEditar){
-        await onInsert({
-            titulo, 
-            direccion,
-            CodPostal,
-            Telefono,
-            Fax,
-            Email,
-            Horas,
-            Atencion
-    
-    
-        })
-    }else{
-        await onUpdate (idSeleccionado, {titulo, direccion, CodPostal,Telefono,Fax, Email,Horas,Atencion });
-       
+        let titulo = form.txtTitulo.value;
+        let direccion = form.txtDireccion.value;
+        let CodPostal = form.txtCodPostal.value;
+        let Telefono = form.txtTelefono.value;
+        let Fax = form.txtFax.value;
+        let Email = form.txtEmail.value;
+        let Horas = form.txtHoras.value;
+        let Atencion = form.txtAtencion.value;
+        let imagenUrl;
+
+    if (estadoEditar==false){
+        await uploadImage();
+
+    // referencia con firestore
+    const ref = firebase.storage().ref();
+
+    // se agarra el file
+    const file = document.querySelector("#txtFile").files[0];
+
+    // se le crea un nuevo nombre
+    const name = new Date () + '-' + file.name;
+   
+    const metadata = {
+        contentType:file.type
+
     }
 
-    
-    estadoEditar=false;
-    idSeleccionado="";
-    form.btnGuardar.innerText="Registrar representacion extranjera"
+    const task = ref.child(name).put(file,metadata)
+
+    task
+    .then(snapshot => snapshot.ref.getDownloadURL())
+    .then(url => {
+       
+        alert("Image upload succesfull")
+        
+        
+        imagenUrl = url
+        
+            
+           
+                onInsert({
+                    titulo, 
+                    direccion,
+                    CodPostal,
+                    Telefono,
+                    Fax,
+                    Email,
+                    Horas,
+                    Atencion,
+                    imagenUrl
+            
+                    
+                })
+            
+
+            
+                
+
+            
+        })
+    }else{
+        onUpdate (idSeleccionado, {titulo, direccion, CodPostal,Telefono,Fax, Email,Horas,Atencion });
+        estadoEditar=false;
+        idSeleccionado="";
+        form.btnGuardar.innerText="Registrar representacion extranjera"
+        
+    }
+
     form.reset();
+    
+    
+
+        
+        
+
+    
+    
 
 
 })
+
+// subir una imagen 
+
+function uploadImage(){
+    
+    
+}
+
