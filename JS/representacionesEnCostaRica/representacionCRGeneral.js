@@ -48,32 +48,35 @@ window.addEventListener("load", async()=>{
         query.forEach(element => {
             let dato=element.data();
             table.innerHTML+= `
-            
             <div class="accordion-item ">
-                <h2 class="accordion-header" id="Title${element.id}">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#${element.id}" aria-expanded="true" aria-controls="${element.id}">
-                        ${dato.pais} - ${dato.ciudad}
-                        <br>
-                        
-                        </button>
-                </h2>
+            <h2 class="accordion-header" id="Title${element.id}">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#${element.id}" aria-expanded="true" aria-controls="${element.id}">
+                    ${dato.pais} - ${dato.ciudad}
+                    <br>
+                </button>
+            </h2>
 
-                <div id="${element.id}" class="accordion-collapse collapse " aria-labelledby="Title${element.id}" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <img src="${dato.imagenUrl}" style= "height:100px ; width:200px"/><br>
-                        <strong>Direccion:</strong> ${dato.Direccion}<br>
-                        <strong>Codigo postal:</strong> ${dato.CodigoPostal}<br>
-                        <strong>telefono:</strong> ${dato.telefono}<br>
-                        <strong>Email:</strong> ${dato.Email}<br>
-                        <strong>Atencion:</strong> ${dato.Atencion}<br>
-                        <strong>Horas:</strong> ${dato.Horas}<br>
-                       
+            <div id="${element.id}" class="accordion-collapse collapse " aria-labelledby="Title${element.id}"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body pb-5">
+                    <img src="${dato.imagenUrl}" class="img-thumbnail float-start position-static" style="height:150px; width:200px" /> <br>
+                    <div class="row">
+                        <div class="col-2">
+                            <strong>Dirección:</strong> ${dato.Direccion}<br>
+                            <strong>Código postal:</strong> ${dato.CodigoPostal}<br>
+                            <strong>Teléfono:</strong> ${dato.telefono}<br>
+                            <strong>Email:</strong> ${dato.Email}<br>
+                        </div>
+                        <div class="col-2">
+                            
+                            <strong>Atención:</strong> ${dato.Atencion}<br>
+                            <strong>Horas:</strong> ${dato.Horas}<br>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            
-
+        </div>
             `;
         });
 

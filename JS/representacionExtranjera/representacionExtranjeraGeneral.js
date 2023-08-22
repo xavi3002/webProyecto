@@ -50,7 +50,7 @@ window.addEventListener("load", async()=>{
             table.innerHTML+= `
             
             <div class="col-4 text-center mb-5">
-            <div class="card border-dark w-100 h-100">
+            <div class="card border-primary w-100 h-100">
                 <img src="${dato.imagenUrl}" alt="Imagen 1" class="card-img-top h-50">
                 <div class="card-body">
                     <h3 class="card-title"> ${dato.titulo} </h3>
