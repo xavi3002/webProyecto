@@ -83,11 +83,11 @@ body {
 .svg-icon path,
 .svg-icon polygon,
 .svg-icon rect {
-  fill: #4691f6;
+  fill: #fff;
 }
 
 .svg-icon circle {
-  stroke: #4691f6;
+  stroke: #fff;
   stroke-width: 1;
 }
 
