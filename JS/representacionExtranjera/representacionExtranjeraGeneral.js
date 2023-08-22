@@ -13,7 +13,7 @@ var idSeleccionado = "";
 
 const form = document.querySelector("#frm");
 // que se agarre el tbody dentro de tbl datos
-const table = document.querySelector(".row")
+const table = document.querySelector(".row2")
 
 
 //---------------------------------------------------------5- Metodos del crud-------------------------------------------------------
@@ -42,16 +42,18 @@ const onDelete = paramId => db.collection(collectionString).doc(paramId).delete(
 
 window.addEventListener("load", async()=>{
     await onFindAll((query)=>{
-
+        let contador = 0;
         table.innerHTML="";
         query.forEach(element => {
             let dato=element.data();
+
+        
             table.innerHTML+= `
                     
             
-        <div class="col col-md-4>
+        <div class="col col-4>
             <div class="card">
-                    <img src="https://geopoliticaybanderas.files.wordpress.com/2015/12/alemania.png?w=500&h=300"
+                    <img src="${dato.imagenUrl}"
                         alt="Imagen 1" class="card-image">
                     <h3 class="card-title"> ${dato.titulo} </h3>
                     <p class="card-description">Direccion: ${dato.direccion} <br>Codigo postal: ${dato.CodPostal} <br>
@@ -64,8 +66,11 @@ window.addEventListener("load", async()=>{
             </div>
         </div>   
       
+        
             
             `;
+
+           
         });
     });
 });
