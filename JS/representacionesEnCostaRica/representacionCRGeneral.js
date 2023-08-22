@@ -66,10 +66,9 @@ window.addEventListener("load", async()=>{
                             <strong>Dirección:</strong> ${dato.Direccion}<br>
                             <strong>Código postal:</strong> ${dato.CodigoPostal}<br>
                             <strong>Teléfono:</strong> ${dato.telefono}<br>
-                            <strong>Email:</strong> ${dato.Email}<br>
                         </div>
                         <div class="col-2">
-                            
+                            <strong>Email:</strong> ${dato.Email}<br>
                             <strong>Atención:</strong> ${dato.Atencion}<br>
                             <strong>Horas:</strong> ${dato.Horas}<br>
                         </div>
