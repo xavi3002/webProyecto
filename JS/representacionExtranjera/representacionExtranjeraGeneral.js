@@ -46,28 +46,26 @@ window.addEventListener("load", async()=>{
         table.innerHTML="";
         query.forEach(element => {
             let dato=element.data();
-
         
             table.innerHTML+= `
-                    
             
-        <div class="col col-4>
-            <div class="card">
-                    <img src="${dato.imagenUrl}"
-                        alt="Imagen 1" class="card-image">
+            <div class="col-4 text-center mb-5">
+            <div class="card border-primary w-100 h-100">
+                <img src="${dato.imagenUrl}" alt="Imagen 1" class="card-img-top h-50">
+                <div class="card-body">
                     <h3 class="card-title"> ${dato.titulo} </h3>
-                    <p class="card-description">Direccion: ${dato.direccion} <br>Codigo postal: ${dato.CodPostal} <br>
-                    Telefono: ${dato.Telefono} <br>
-                    Fax: ${dato.Fax}<br>
-                    Email: ${dato.Email}<br>
-                    Tipo de atencion ${dato.Atencion}<br>
-                    Horario: ${dato.Horas}
+                    <p class="card-text text-dark" style="text-align:left !important;">
+                        <strong>Dirección:</strong> ${dato.direccion}<br>
+                        <strong>Código Postal:</strong> ${dato.CodPostal} <br>
+                        <strong>Teléfono:</strong> ${dato.Telefono} <br>
+                        <strong>Fax:</strong> ${dato.Fax}<br>
+                        <strong>Email:</strong> ${dato.Email}<br>
+                        <strong>Tipo de atención:</strong> ${dato.Atencion}<br>
+                        <strong>Horario:</strong> ${dato.Horas}
                     </p>
+                </div>
             </div>
-        </div>   
-      
-        
-            
+        </div>
             `;
 
            
