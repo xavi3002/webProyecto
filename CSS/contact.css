@@ -25,6 +25,21 @@ body {
   padding: 40px 30px;
 }
 
+.svg-icon {
+  width: 1em;
+  height: 1em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #fff;
+}
+
+.svg-icon circle {
+  stroke: #4691f6;
+  stroke-width: 1;
+}
 .contact-in:nth-child(1) {
   flex: 30%;
   background: url(../pictures/sede.jpg);
