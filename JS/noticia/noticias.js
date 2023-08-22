@@ -42,7 +42,7 @@ window.addEventListener("load", async ()=>{
                                     <td>${dato.titulo}</td>
                                     <td>${dato.fecha}</td>
                                     <td>${dato.detalle}</td>
-                                    <td>${dato.imagen}</td>
+                                    <td><img src="${dato.imagenUrl}" style= "height:100px ; width:200px"</td>
                                     <td>
                                         <button class= "btn btn-warning btn-editar mb-1" data-id="${documento.id}">Editar</button>
                                         <button class= "btn btn-danger btn-borrar" data-id="${documento.id}">Borrar</button>
@@ -82,25 +82,74 @@ window.addEventListener("load", async ()=>{
     }); 
 });
 
-/* 7. CONFIGURAR EL SUBMIT */
 
-form.addEventListener("submit", async (ev)=>{
-    ev.preventDefault();
+// 7- configurar el submit 
+var ejecutar = false;
+form.addEventListener("submit", async (ev) =>{
+ev.preventDefault();
+
+
     let titulo = form.txtTitulo.value;
     let fecha = form.txtFecha.value;
     let detalle = form.txtDetalleNot.value;
-    //let imagen = form.txtImagen.value;
+    let imagenUrl;
 
-    if (!editStatus){
-        await onInsert({titulo, fecha, detalle});
-        alert("Registro almacenado correctamente.");
-    } else {
-        await onUpdate(idSeleccionado, {titulo, fecha, detalle});
-        alert("Registro actualizado correctamente");
+    if (editStatus==false){
+    
+
+    // referencia con firestore
+    const ref = firebase.storage().ref();
+
+    // se agarra el file
+    const file = document.querySelector("#txtFile").files[0];
+
+    // se le crea un nuevo nombre
+    const name = new Date () + '-' + file.name;
+   
+    const metadata = {
+        contentType:file.type
+
     }
 
-    editStatus = false;
-    idSeleccionado = "";
-    form.btnGuardar.innerText = "Guardar";
+    const task = ref.child(name).put(file,metadata)
+
+    task
+    .then(snapshot => snapshot.ref.getDownloadURL())
+    .then(url => {
+       
+        alert("Image upload succesfull")
+        
+        
+        imagenUrl = url
+        
+            
+           
+        onInsert({titulo, fecha, detalle,imagenUrl});
+        alert("Registro almacenado correctamente.");
+            
+
+            
+        })
+    }else{
+        await onUpdate(idSeleccionado, {titulo, fecha, detalle});
+        alert("Registro actualizado correctamente");
+
+        estadoEditar=false;
+        idSeleccionado="";
+        form.btnGuardar.innerText="Registrar representacion extranjera"
+        
+    }
+
     form.reset();
-});
+    
+    
+
+        
+        
+
+    
+    
+
+
+})
+
